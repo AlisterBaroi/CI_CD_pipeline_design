@@ -1,4 +1,4 @@
-This is  Beta-Branch with main and test files
+This is the main branch with main.py and test_main.py files
 
 # Development Operation
 ## Requirements
