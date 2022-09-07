@@ -38,6 +38,7 @@ jobs:
 
   tests:
     runs-on: ubuntu-latest
+    needs: build
     steps:
     - if: ${{ failure() }}
       run: echo 'Failed to Merge, test failed' 
