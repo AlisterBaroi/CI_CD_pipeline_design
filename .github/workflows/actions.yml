@@ -35,21 +35,6 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-        
-    - name: Approve Pull Request
-      uses: juliangruber/approve-pull-request-action@v1
       
-  build2:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Find Pull Request
-      uses: juliangruber/find-pull-request-action@v1
-      id: find-pull-request
-      with:
-        branch: my-branch-name
-    - run: echo "Pull Request ${number} (${sha})"
-    env:
-      number: ${{ steps.find-pull-request.outputs.number }}
-      sha: ${{ steps.find-pull-request.outputs.head-sha }}
       
     
