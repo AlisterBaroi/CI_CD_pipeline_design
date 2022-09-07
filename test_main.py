@@ -1,3 +1,9 @@
-from main import code1
+import unittest
+import main
 
-type(text1) == int 
+class TestMain(unittest.TestCase):
+    def test_str(self):
+        result main.code1()
+        self.assertEqual(result, str)
+
+# type(text1) == int 
