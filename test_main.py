@@ -6,7 +6,6 @@ class TestMain(unittest.TestCase):
         result = main.code1()
         x = self.assertEqual(result, str)
         if x != True:
-            print( 'Test Fail Output: ', x)
-        else:
-            print( 'Test Pass Output: ', x)
+            print( 'Test Fail Output: ', str(x))
+        print( 'Test Pass Output: ', str(x))
 
