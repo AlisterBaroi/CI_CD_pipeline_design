@@ -39,3 +39,7 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+    - if: ${{ failure() }}
+      run: echo 'Failed to Merge, test failed' 
+    - if: ${{ success() }}  
+      run: echo 'TEST PASSED BY ALISTER' 
