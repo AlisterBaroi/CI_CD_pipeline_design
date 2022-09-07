@@ -1,4 +1,4 @@
-alister branch 
+alister branch check auto pull to dev branch
 
 # Development Operation
 ## Requirements
