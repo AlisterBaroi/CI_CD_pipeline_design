@@ -1,3 +1,3 @@
-from root import main.py 
+from root import main
 
 type(text1) == int 
