@@ -1,4 +1,4 @@
-alister enabled auto-merge for dev branch
+alister branch
 
 # Development Operation
 ## Requirements
