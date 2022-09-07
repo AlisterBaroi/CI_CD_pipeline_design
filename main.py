@@ -1,3 +1,3 @@
-def code1():
-    text1 = "Hello Wolrd"
+def code1(x = 12):
+    text1 = x
     return text1
