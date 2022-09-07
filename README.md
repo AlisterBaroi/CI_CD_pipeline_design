@@ -1,4 +1,4 @@
-alister branch check auto pull to dev branch
+alister enabled auto-merge for dev branch
 
 # Development Operation
 ## Requirements
