@@ -1,2 +1,3 @@
-text1 = "Hello Wolrd"
-print(text1)
+def code1():
+    text1 = "Hello Wolrd"
+    return text1
