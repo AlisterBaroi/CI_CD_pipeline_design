@@ -26,6 +26,7 @@ jobs:
         GITHUB_TOKEN: '${{ secrets.ALISTERS_TOKEN }}'
 
   build:
+    needs: pr_commented
     runs-on: ubuntu-latest
     steps:    
     - uses: actions/checkout@v3
