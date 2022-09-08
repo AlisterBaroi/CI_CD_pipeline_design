@@ -56,8 +56,8 @@ jobs:
       if: steps.check.outputs.triggered == 'true'
 
     - name: Deploying code
-    - run: |
-          echo A comment on PR
+      run: |
+        pip install django
       if: steps.check.outputs.triggered == 'true'
       
 
