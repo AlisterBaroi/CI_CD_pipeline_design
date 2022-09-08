@@ -44,7 +44,6 @@ jobs:
       run: |
         pytest
       
-    - name: Trigger for auto commit 
     - uses: khan/pull-request-comment-trigger@v1.1.0
       id: check
       with:
