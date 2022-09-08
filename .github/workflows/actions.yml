@@ -43,7 +43,8 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-      
+
+    - name: Checking Comment Trigger
     - uses: khan/pull-request-comment-trigger@v1.1.0
       id: check
       with:
