@@ -54,8 +54,7 @@ jobs:
       if: steps.check.outputs.triggered == 'true'
 
     - name: Deploying code
-      run: | 
-        print("Deploying Application")  
+      run: echo 'Deploying Application'
       if: steps.check.outputs.triggered == 'true'
 
 
