@@ -1,6 +1,6 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
+#
 name: Testing Python Application
 
 on:
@@ -26,6 +26,7 @@ jobs:
         GITHUB_TOKEN: '${{ secrets.ALISTERS_TOKEN }}'
 
   build:
+    needs: pr_commented
     runs-on: ubuntu-latest
     steps:    
     - uses: actions/checkout@v3
