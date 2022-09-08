@@ -36,7 +36,7 @@ jobs:
     
     - name: Pull Request Comment "deploy" Trigger
       uses: khan/pull-request-comment-trigger@master
-      id: check
+      id: execute
       with:
         trigger: '@deploy_code'
         reaction: rocket
