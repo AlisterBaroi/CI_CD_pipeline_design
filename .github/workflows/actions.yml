@@ -24,7 +24,7 @@ jobs:
       with:
         python-version: "3.9.7"
         
-    - name: Pull Request Comment "test" Trigger
+    - name: Pull Request Comment Trigger
       uses: khan/pull-request-comment-trigger@master
       id: check
       with:
