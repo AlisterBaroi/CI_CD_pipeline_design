@@ -6,6 +6,7 @@ name: Testing Python Application
 on:
   push:
     branches: [ "main", "Beta", "Dev" ]
+    types: [opened]
   pull_request:
     branches: [ "main", "Beta", "Dev" ]
     types: [opened]
