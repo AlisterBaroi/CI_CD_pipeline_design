@@ -34,11 +34,6 @@ jobs:
       with:
         trigger: '@test'
         reaction: eyes
-      env:
-        GITHUB_TOKEN: '${{ secrets.ALISTERS_TOKEN }}'
-
-    - name: Pull Request Comment Trigger
-      uses: khan/pull-request-comment-trigger@master
       id: execute
       with:
         trigger: '@deploy'
