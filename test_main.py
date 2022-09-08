@@ -6,4 +6,6 @@ class TestMain(unittest.TestCase):
         result = main.code1()
         return self.assertEqual(result, str)
         
-
+    def test_str(self):
+        result = main.test()
+        return self.assertEqual(result, 't')
