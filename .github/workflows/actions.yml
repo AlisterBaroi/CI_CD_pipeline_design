@@ -14,6 +14,17 @@ on:
     types: [created]
 
 jobs:
+  pr_commented:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: khan/pull-request-comment-trigger@master
+        id: check
+        with:
+          trigger: '@deploy'
+          reaction: rocket
+        env:
+          GITHUB_TOKEN: '${{ secrets.ALISTERS_TOKEN }}'
+
   build:
     runs-on: ubuntu-latest
     steps:    
@@ -23,15 +34,6 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: "3.9.7"
-        
-    - name: Pull Request Comment Trigger
-      uses: khan/pull-request-comment-trigger@master
-      id: check
-      with:
-        trigger: '@deploy'
-        reaction: rocket
-      env:
-        GITHUB_TOKEN: '${{ secrets.ALISTERS_TOKEN }}'
         
     - name: Install dependencies
       run: |
@@ -57,16 +59,7 @@ jobs:
       run: echo 'Deploying Application'
       if: steps.check.outputs.triggered == 'true'
       
-  pr_commented:
-    # This job only runs for pull request comments
-    name: PR comment
-    if: ${{ github.event.issue.pull_request }}
-    runs-on: ubuntu-latest
-    steps:
-      - run: |
-          echo A comment on PR $NUMBER
-        env:
-          NUMBER: ${{ github.event.issue.number }}
+
 
     
         
