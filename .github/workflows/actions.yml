@@ -11,7 +11,7 @@ on:
     branches: [ "main", "Beta", "Dev" ]
     types: [opened]
   issue_comment:
-    types: [created, edited]
+    types: [created]
 
 jobs:
   build:
@@ -54,7 +54,7 @@ jobs:
       if: steps.check.outputs.triggered == 'true'
 
     - name: Deploying code
-      run: print "Deploying Application"  
+      run: echo 'Deploying Application'
       if: steps.check.outputs.triggered == 'true'
 
 
