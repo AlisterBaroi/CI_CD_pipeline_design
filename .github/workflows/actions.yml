@@ -13,9 +13,6 @@ on:
   issue_comment:
     types: [created]
 
-permissions:
-  contents: read
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,6 +24,15 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: "3.9.7"
+        
+    - name: Pull Request Comment "test" Trigger
+      uses: khan/pull-request-comment-trigger@master
+      id: check
+      with:
+        trigger: '@test_code'
+        reaction: eyes
+      env:
+        GITHUB_TOKEN: '${{ secrets.ALISTERS_TOKEN }}'
     
     - name: Pull Request Comment "deploy" Trigger
       uses: khan/pull-request-comment-trigger@master
