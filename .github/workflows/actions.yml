@@ -13,8 +13,8 @@ on:
   issue_comment:
     types: [created]
 
-# permissions:
-#   contents: read
+permissions:
+  contents: read
 
 jobs:
   build:
@@ -27,16 +27,15 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: "3.9.7"
-
-    - uses: khan/pull-request-comment-trigger@master
+        
+    - name: Pull Request Comment Trigger
+      uses: khan/pull-request-comment-trigger@master
       id: check
       with:
         trigger: '@deploy'
         reaction: rocket
       env:
         GITHUB_TOKEN: '${{ secrets.ALISTERS_TOKEN }}'
-    # - run: 'echo Found it!'
-      # if: steps.check.outputs.triggered == 'true'
         
     - name: Install dependencies
       run: |
