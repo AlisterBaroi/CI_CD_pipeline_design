@@ -27,15 +27,15 @@ jobs:
       with:
         python-version: "3.9.7"
 
-    - uses: khan/pull-request-comment-trigger@v1.1.0
-      id: check
-      with:
-        trigger: '@deploy'
-        reaction: rocket
-      env:
-        GITHUB_TOKEN: '${{ secrets.ALISTERS_TOKEN }}'
+    # - uses: khan/pull-request-comment-trigger@v1.1.0
+    #   id: check
+    #   with:
+    #     trigger: '@deploy'
+    #     reaction: rocket
+    #   env:
+    #     GITHUB_TOKEN: '${{ secrets.ALISTERS_TOKEN }}'
     # - run: 'echo Found it!'
-      if: steps.check.outputs.triggered == 'true'
+      # if: steps.check.outputs.triggered == 'true'
         
     - name: Install dependencies
       run: |
