@@ -44,8 +44,9 @@ jobs:
       run: |
         pytest
 
-    - name: Checking Comment Trigger
+
     - uses: khan/pull-request-comment-trigger@v1.1.0
+    - name: Checking Comment Trigger
       id: check
       with:
         trigger: '@deploy'
