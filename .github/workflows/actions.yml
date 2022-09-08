@@ -28,7 +28,7 @@ jobs:
       with:
         python-version: "3.9.7"
 
-    - uses: khan/pull-request-comment-trigger@v1.1.0
+    - uses: khan/pull-request-comment-trigger@master
       id: check
       with:
         trigger: '@deploy'
