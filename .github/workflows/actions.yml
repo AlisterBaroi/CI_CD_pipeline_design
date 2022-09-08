@@ -28,8 +28,8 @@ jobs:
       uses: khan/pull-request-comment-trigger@master
       id: check
       with:
-        trigger: '@test_code'
-        reaction: eyes
+        trigger: '@deploy'
+        reaction: rocket
       env:
         GITHUB_TOKEN: '${{ secrets.ALISTERS_TOKEN }}'
     
