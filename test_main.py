@@ -5,7 +5,7 @@ class TestMain(unittest.TestCase):
     
     def test_str(self):
         result = main.code1()
-        self.assertEqual(result, str)
+        return self.assertEqual(result, str)
         
     def test_str(self):
         result = main.test()
