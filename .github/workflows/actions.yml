@@ -32,7 +32,7 @@ jobs:
       uses: khan/pull-request-comment-trigger@master
       id: check
       with:
-        trigger: '@test'
+        trigger: '@test_code'
         reaction: eyes
       env:
         GITHUB_TOKEN: '${{ secrets.ALISTERS_TOKEN }}'
@@ -41,7 +41,7 @@ jobs:
       uses: khan/pull-request-comment-trigger@master
       id: execute
       with:
-        trigger: '@deploy'
+        trigger: '@deploy_code'
         reaction: rocket
       env:
         GITHUB_TOKEN: '${{ secrets.ALISTERS_TOKEN }}'
