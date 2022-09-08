@@ -47,7 +47,7 @@ jobs:
     - uses: khan/pull-request-comment-trigger@v1.1.0
       id: check
       with:
-        trigger: @COMMAND_TO_BUILD
+        trigger: @deploy
         reaction: rocket
       env:
         GITHUB_TOKEN: '${{ secrets.ALISTERS_TOKEN }}'
