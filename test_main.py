@@ -8,4 +8,4 @@ class TestMain(unittest.TestCase):
         
     def test_str(self):
         result = main.test()
-        return self.assertEqual(result, 't')
+        return self.assertEqual(result, 'tffffffffffffffffffffffffffff') 
