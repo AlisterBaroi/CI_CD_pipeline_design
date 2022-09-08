@@ -13,9 +13,6 @@ on:
   issue_comment:
     types: [created]
 
-permissions:
-  contents: read
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -39,7 +36,7 @@ jobs:
     
     - name: Pull Request Comment "deploy" Trigger
       uses: khan/pull-request-comment-trigger@master
-      id: execute
+      id: check
       with:
         trigger: '@deploy_code'
         reaction: rocket
